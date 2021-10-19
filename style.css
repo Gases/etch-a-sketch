@@ -1,7 +1,76 @@
 html {
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+.header {
+  text-align: center;
+}
+
+.main {
+  text-align: center;
+}
+
+.controls {
+  margin: 20px;
+}
+
+.grid {
+  width: 604px;
+  height: 604px;
+  display: inline-grid;
+  grid-gap: 0;
+  border: 2px solid black;
+  border-radius: 2px;
+}
+
+.grid-10x10 {
+  grid-template-columns: repeat(10, auto);
+  grid-template-rows: repeat(10,auto);
+}
+
+.grid-10x10 > div {
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  width: 60px;
+  height: 60px;
+}
+
+.grid-20x20 {
+  grid-template-columns: repeat(20,auto);
+}
+
+.grid-20x20 > div {
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+}
+
+.grid-30x30 {
+  grid-template-columns: repeat(30,auto);
+}
+
+.grid-30x30 > div {
+  border: 1px solid black;
+  width: 20px;
+  height: 20px;
+}
+
+.grid-40x40 {
+  grid-template-columns: repeat(40,auto);
+}
+
+.grid-40x40 > div {
+  border: 1px solid black;
+  width: 15px;
+  height: 15px;
+}
+
+.black {
+  background-color: black;
 }
