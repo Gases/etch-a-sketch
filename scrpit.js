@@ -1,10 +1,10 @@
-function generateGrid(size = 10 * 10, gridClass = 'grid-10x10') {
+function generateGrid(size = 10, gridClass = 'grid-10x10') {
     let grid = document.querySelector('.grid');
     grid.innerHTML = '';
     grid.classList.remove('grid-10x10','grid-20x20','grid-30x30','grid-40x40');
     grid.classList.add(gridClass);
 
-    for (let i = 0; i < size; i++) {
+    for (let i = 0; i < size ** 2; i++) {
         let div = document.createElement('div');
         div.classList.add('grid-element');
         grid.appendChild(div);
@@ -17,13 +17,13 @@ function changeGrid() {
     let gridButton = document.querySelectorAll('.controls > button');
     gridButton.forEach(button => button.addEventListener('click', e => {
         if (e.target.classList.contains('10x10')) {
-            generateGrid(10 * 10, 'grid-10x10');
+            generateGrid(10, 'grid-10x10');
         } else if (e.target.classList.contains('20x20')) {
-            generateGrid(20 * 20, 'grid-20x20');
+            generateGrid(20, 'grid-20x20');
         } else if (e.target.classList.contains('30x30')) {
-            generateGrid(30 * 30, 'grid-30x30');
+            generateGrid(30, 'grid-30x30');
         } else {
-            generateGrid(40 * 40, 'grid-40x40');
+            generateGrid(40, 'grid-40x40');
         }
     }));
 }
